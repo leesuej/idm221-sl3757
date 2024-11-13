@@ -60,7 +60,6 @@ h2 {
     font-family: var(--font-cursive);
     font-size: 6vh;
     font-weight: 400;
-    letter-spacing: -2px;
     line-height: 1;
     margin-block-start: var(--rhythm);
     text-align: center;
@@ -170,4 +169,9 @@ section.work-item {
     font-style: italic;
     font-weight: 500;
     margin-left: 1em;
+}
+
+section.introduction {
+    font-size: 16px;
+    text-align: center;
 }
