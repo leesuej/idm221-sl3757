@@ -42,7 +42,6 @@ main {
     margin-right: 20px;
 }
 
-
 h1 {
     color: var(--dark-red);
     font-family: var(--font-serif);
@@ -75,27 +74,23 @@ h3 {
 
 .navbar ul{
     color:#2C3B4D;
-    display: inline-flex;
+    display: flex;
+    flex-direction: row;
     font-family: var(--font-serif);
     font-size: 1.5em;
     justify-content: center;
+    letter-spacing: 0.16px;
     list-style-type: none;
     margin: 1.5em auto;
-    max-width: 1100px;
-    padding: 40px;
+    max-width: 393px;
+    padding: 46px 53px 11px;    
     text-align: center;
 }
 
-.navbar a{
-    color:#523B22;
-    text-decoration: none;
-    display: flex;
-    gap: 20px;
-}
 
 .navbar li {
-    display: inline-block;
     margin: 0 10px;
+    padding: 30px;
     text-align: center;
 }
 
@@ -133,7 +128,7 @@ img {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 2500px;
     margin: 0 auto;
 }
 
@@ -150,7 +145,7 @@ img {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin: 20 auto;
+    margin: 20, 20;
 }
 
 .description p {
