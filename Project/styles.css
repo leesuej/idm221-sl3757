@@ -66,10 +66,20 @@ h2 {
 
 h3 {
     color:#2C3B4D;
-    font-size: 2dvh;
+    font-size: 2.5vh;
     font-style: italic;
     font-weight: 500;
     margin-left: 1em;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    padding: 10px 20px;
+    z-index: 500;
+    width: 100%;
+    box-shadow: 0 1px 2px -2px gray;
+    background-color:#fffcf9;
 }
 
 .navbar ul{
@@ -82,33 +92,46 @@ h3 {
     letter-spacing: 0.16px;
     list-style-type: none;
     margin: 1.5em auto;
-    max-width: 393px;
+    max-width: 500px;
     padding: 46px 53px 11px;    
     text-align: center;
 }
 
 
 .navbar li {
-    margin: 0 10px;
+    font-size: 30px;
+    margin: 0 50px;
     padding: 30px;
     text-align: center;
+    padding: auto;
 }
 
-.navbar li a {
-    color: #2C3B4D;
-    font-size: 1.2em;
+.navbar a {
     text-decoration: none;
+    color:#2C3B4D;
+    padding: 8px 16px;
+    display: block;
+    font-size: 35px;
+}
+
+.navbar li {
+    margin: 0;
 }
 
 .navbar li a:hover {
     color: #A94034;
 }
 
+html {
+    font-size: 16px;
+}
+
 body {
     font-family: var(--font-serif);
-    font-size: 110%;
-    margin: auto;
-    padding: auto;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
 }
 
 p {
@@ -124,7 +147,7 @@ img {
 
 .wrapper {
     margin: 0 auto;
-    max-width: 100%; /* Set max-width value */
+    max-width: 100%;
 }
 
 .container {
@@ -159,14 +182,45 @@ ul {
 }
 
 section.work-item {
-    color:#2C3B4D;
-    font-size: 2dvh;
+    color: #2C3B4D;
+    font-size: 2.5vw;
     font-style: italic;
     font-weight: 500;
-    margin-left: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1em;
+    padding: 1em;
+}
+
+section.work-item img {
+    width: 500%;
+    max-width: 600px;
+    height: auto;
 }
 
 section.introduction {
     font-size: 16px;
     text-align: center;
+}
+
+.introduction p {
+    font-size: 2em;
+    line-height: 1.5;
+}
+
+.about {
+    text-align: center;
+    padding: 2em;
+}
+
+.profile-image {
+    width: 50%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 50%;
+    margin: 1em 0;
 }
