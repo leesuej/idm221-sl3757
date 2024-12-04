@@ -1,16 +1,20 @@
 @font-face {
     font-family: 'EB Garamond';
-    src: url('../fonts/EB_Garamond') format('truetype');
+    src: url('../fonts/EB_Garamond/EB_Garamond.ttf') format('truetype');
     font-weight: 100 900;
+    font-style: normal;
 }
+
 @font-face {
     font-family: 'Caveat';
-    src: url('../fonts/Caveat') format('truetype');
+    src: url('../fonts/Caveat/Caveat.ttf') format('truetype');
     font-weight: 100 900;
+    font-style: normal;
 }
+
 @font-face {
     font-family: 'Karla';
-    src: url('../fonts/Karla') format('truetype');
+    src: url('../fonts/Karla/Karla.ttf') format('truetype');
     font-weight: 100 900;
 }
 
@@ -31,112 +35,163 @@
     --font-serif: 'EB Garamond', serif;
     --font-cursive: 'Caveat', cursive;
     --font-sanserif: 'Karla', san-serif;
-    background-color: #fffcf9;
+    background-color: #FDF5EC;
+}
+
+html {
+    font-size: 20px;
+}
+
+body {
+    font-family: var(--font-serif);
+    text-align: center;
+    font-size: 1em;
+    margin: 0;
+    line-height: 1.5;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 main {
-    font-size: 2dvh;
+    font-size: 1em;
     color: var(--alternate);
     font-family: var(--font-serif);
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 0 20px;
 }
 
 h1 {
     color: var(--dark-red);
     font-family: var(--font-serif);
-    font-size: 6vh;
+    font-size: 32px;
     font-weight: 100;
-    letter-spacing: -2px;
     line-height: 1;
     margin-block-start: var(--rhythm);
     padding-top: 50%;
-    text-align: center;
+    padding-left: 20px
 }
 
 h2 {
-    color:#A94034;
+    color: #A94034;
     font-family: var(--font-cursive);
-    font-size: 6vh;
-    font-weight: 400;
+    font-size: 48px;
+    font-weight: 200;
     line-height: 1;
-    margin-block-start: var(--rhythm);
     text-align: center;
 }
 
 h3 {
-    color:#2C3B4D;
-    font-size: 2.5vh;
+    color: #2C3B4D;
+    font-size: 28px;
     font-style: italic;
     font-weight: 500;
-    margin-left: 1em;
+    margin: auto;
+}
+
+.inline-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
+.inline-header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.inline-header h2 {
+    margin: 0;
+    font-size: 5rem;
+    font-weight: 100;
 }
 
 .navbar {
     position: sticky;
     top: 0;
-    padding: 10px 20px;
     z-index: 500;
     width: 100%;
-    box-shadow: 0 1px 2px -2px gray;
-    background-color:#fffcf9;
-}
-
-.navbar ul{
-    color:#2C3B4D;
+    box-sizing: border-box;
+    background-color: #FDF5EC;
     display: flex;
-    flex-direction: row;
-    font-family: var(--font-serif);
-    font-size: 1.5em;
     justify-content: center;
-    letter-spacing: 0.16px;
-    list-style-type: none;
-    margin: 1.5em auto;
-    max-width: 500px;
-    padding: 46px 53px 11px;    
-    text-align: center;
+    align-items: center;
+    padding: 10px 15px;
+    overflow-x: hidden;
 }
 
+.navbar ul {
+    color: #2C3B4D;
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-serif);
+    font-size: 18px;
+    letter-spacing: 0.16px;
+    list-style: none;
+    margin: 0 auto;
+    padding: 10px 10px;
+    text-align: center;
+    line-height: normal;
+}
 
 .navbar li {
-    font-size: 30px;
-    margin: 0 50px;
-    padding: 30px;
-    text-align: center;
-    padding: auto;
+    margin: 0 15px;
 }
 
 .navbar a {
     text-decoration: none;
-    color:#2C3B4D;
-    padding: 8px 16px;
+    color: #2C3B4D;
+    padding: 5px 10px;
     display: block;
-    font-size: 35px;
+    font-size: 1em;
+    font-weight: 500;
 }
 
-.navbar li {
-    margin: 0;
-}
-
-.navbar li a:hover {
+.navbar a:hover {
     color: #A94034;
 }
 
-html {
-    font-size: 16px;
+.hero {
+    text-align: center;
 }
 
-body {
-    font-family: var(--font-serif);
+.hero-content h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.hero-content .highlight {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+}
+
+.hero-content .small-text {
     font-size: 1rem;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+    color: #1e3a8a;
+    margin-top: 20px;
+    font-style: italic;
 }
 
 p {
-    font-size: 16px;
-    margin: 50px;
+    font-size: 20px;
+    margin: 1em;
     text-align:justify;
 }
 
@@ -145,49 +200,20 @@ img {
     max-width: 100%;
 }
 
-.wrapper {
+.wrapper, .container {
     margin: 0 auto;
     max-width: 100%;
 }
 
-.container {
-    max-width: 2500px;
-    margin: 0 auto;
-}
-
-.contact-details ul {
-    list-style-type: none;
-    text-align: center;
-}
-
-.contact-details a {
-    color: var(--dark-blue);
-}
-
-.description {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 20, 20;
-}
-
-.description p {
-    font-size: 2em;
-}
 
 ul {
-    font-size: 16px;
-    margin: 50px;
+    font-size: 1rem;
+    margin: 2em;
     text-align: left;
 }
 
 section.work-item {
-    color: #2C3B4D;
-    font-size: 2.5vw;
-    font-style: italic;
     font-weight: 500;
-    margin-left: auto;
-    margin-right: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -197,19 +223,25 @@ section.work-item {
 }
 
 section.work-item img {
-    width: 500%;
     max-width: 600px;
     height: auto;
+    position: relative;
+    width: 50%;
+    max-width: 500px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 8px;
 }
 
 section.introduction {
-    font-size: 16px;
+    font-size: 1rem;
     text-align: center;
 }
 
 .introduction p {
-    font-size: 2em;
-    line-height: 1.5;
+    font-size: 20px;
+    margin: 1em;
+    text-align: center;
 }
 
 .about {
@@ -219,8 +251,38 @@ section.introduction {
 
 .profile-image {
     width: 50%;
-    max-width: 600px;
     height: auto;
     border-radius: 50%;
-    margin: 1em 0;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ddd;
+    padding: 5px;
+    width: 150px;
 }
+
+.contact-details p {
+    font-size: 1rem; 
+    margin: 10px 0;
+    padding: 5px 0;
+    text-align: center;
+}
+
+.contact-details a {
+    color: var(--dark-blue);
+    text-decoration: none;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+img {
+    border-radius: 8px;
+    display: block;
+    width: 75%;
+  }
