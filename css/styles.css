@@ -78,7 +78,7 @@ h2 {
     font-family: var(--font-cursive);
     font-size: 48px;
     font-weight: 200;
-    line-height: 1;
+    line-height: 10px;
     text-align: center;
 }
 
@@ -237,9 +237,9 @@ section.introduction {
 }
 
 .introduction p {
-    font-size: 20px;
+    font-size: 18px;
     margin: 1em;
-    text-align: center;
+    text-align: justify;
 }
 
 .about {
