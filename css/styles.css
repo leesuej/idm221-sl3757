@@ -2,17 +2,16 @@
     font-family: 'EB Garamond';
     src: url('../css/fonts/EB_Garamond/EBGaramond.ttf') format('truetype');
 }
-
 @font-face {
     font-family: 'Caveat';
     src: url('../css/fonts/Caveat/Caveat.ttf') format('truetype');
 }
-
 @font-face {
     font-family: 'Karla';
     src: url('fonts/Karla/Karla.ttf') format('truetype');
     font-weight: 100 900;
 }
+
 
 :root {
     --light-blue: #eff6ff;
@@ -34,8 +33,13 @@
     background-color: #FDF5EC;
 }
 
+
+/* ------------------------------
+   Global Styles
+------------------------------ */
 html {
-    font-size: 20px;
+    font-size: 18px;
+    font-family: 'EB Garamond', serif;
 }
 
 body {
@@ -43,18 +47,41 @@ body {
     text-align: center;
     font-size: 1em;
     margin: 0;
-    line-height: 1.5;
     padding: 0;
-    box-sizing: border-box; 
+    line-height: 1.3;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
 }
 
+img {
+    border-radius: 8px;
+    display: block;
+    width: 75%;
+    height: auto;
+    max-width: 100%;
+  }
+
+p {
+    font-size: 20px;
+    margin: 1em;
+    text-align:justify;
+}
+
+ul {
+    font-size: 1rem;
+    margin: 1em;
+    text-align: left;
+}
+
+/* ------------------------------
+   Main Content Styles
+------------------------------ */
 main {
     font-size: 1em;
     color: var(--alternate);
@@ -62,15 +89,19 @@ main {
     margin: 0 20px;
 }
 
+/* ------------------------------
+   Header Styles
+------------------------------ */
+
 h1 {
     color: var(--dark-red);
     font-family: var(--font-serif);
     font-size: 32px;
     font-weight: 100;
-    line-height: 1;
+    line-height: 40px;
     margin-block-start: var(--rhythm);
     padding-top: 50%;
-    padding-left: 20px
+    padding-left: 20px;
 }
 
 h2 {
@@ -78,7 +109,7 @@ h2 {
     font-family: var(--font-cursive);
     font-size: 48px;
     font-weight: 200;
-    line-height: 10px;
+    line-height: 40px;
     text-align: center;
 }
 
@@ -90,6 +121,10 @@ h3 {
     margin: auto;
 }
 
+
+/* ------------------------------
+   Inline Header Styles
+------------------------------ */
 .inline-header {
     display: flex;
     align-items: baseline;
@@ -97,19 +132,23 @@ h3 {
 }
 
 .inline-header h1 {
-    color:#FDF5EC;
+    color:#A94034;
     margin: 0;
     font-size: 2rem;
     font-weight: 400;
 }
 
 .inline-header h2 {
-    color:#FDF5EC;
+    color:#A94034;
     margin: 0;
     font-size: 5rem;
     font-weight: 100;
 }
 
+
+/* ------------------------------
+   Navbar Styles
+------------------------------ */
 .navbar {
     position: sticky;
     top: 0;
@@ -121,9 +160,9 @@ h3 {
     justify-content: center;
     align-items: center;
     padding: 10px 15px;
-    overflow-x: hidden;
 }
 
+/* Navbar List Styles */
 .navbar ul {
     color: #2C3B4D;
     display: flex;
@@ -132,12 +171,13 @@ h3 {
     font-size: 18px;
     letter-spacing: 0.16px;
     list-style: none;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 10px 10px;
     text-align: center;
     line-height: normal;
 }
 
+/* Navbar List Item Styles */
 .navbar li {
     margin: 0 15px;
 }
@@ -155,20 +195,19 @@ h3 {
     color: #A94034;
 }
 
-.hero {
-    text-align: center;
-}
+
+/* ------------------------------
+   Hero Section Styles
+------------------------------ */
 
 .hero-content h1 {
     font-size: 2rem;
     margin-bottom: 20px;
-    text-align: left;
 }
 
 .hero-content h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    text-align: left;
 }
 
 .hero-content .highlight {
@@ -178,6 +217,7 @@ h3 {
 
 .hero-content p {
     font-size: 1.2rem;
+    text-align: left;
 }
 
 .hero-content .small-text {
@@ -187,15 +227,41 @@ h3 {
     font-style: italic;
 }
 
-p {
-    font-size: 20px;
-    margin: 1em;
-    text-align:justify;
+.hero {
+    position: relative;
+    overflow: hidden;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-img {
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+
+.doodle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
     height: auto;
-    max-width: 100%;
+    z-index: 1;
+}
+
+
+.hero-image {
+    position: absolute;
+    top: 50%; /* Starting point */
+    left: 50%;
+    transform: translate(-50%, -120%); /* Move up by 10% more */
+    width: 100%;
+    height: auto;
 }
 
 .wrapper, .container {
@@ -204,11 +270,6 @@ img {
 }
 
 
-ul {
-    font-size: 1rem;
-    margin: 1em;
-    text-align: left;
-}
 
 section.work-item {
     font-weight: 500;
@@ -236,10 +297,48 @@ section.introduction {
     text-align: center;
 }
 
+.introduction {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    font-family: 'EB Garamond', serif;
+}
+
+.second_introduction {
+    padding-bottom: 20px;
+}
+
+.second_introduction h2 {
+    font-size: 2rem;
+    color: #A94034;
+    margin-bottom: 10px;
+}
+
+.second_introduction .small-text {
+    font-size: 1rem;
+    color: #1e3a8a;
+    margin-top: 20px;
+    font-style: italic;
+}
+
 .introduction p {
     font-size: 18px;
-    margin: 1em;
+    color: #2C3B4D;
+    line-height: 1.4;
+    margin-bottom: 15px;
     text-align: justify;
+    font-family: 'EB Garamond', serif;
+}
+
+.introduction .small-text {
+    font-size: 1rem;
+    color: #1e3a8a;
+    margin-top: 10px;
+    font-style: italic;
+    line-height: 1.4;
+    font-family: 'EB Garamond', serif;
+
 }
 
 .about {
@@ -258,17 +357,6 @@ section.introduction {
     width: 150px;
 }
 
-.contact-details p {
-    font-size: 1rem; 
-    margin: 10px 0;
-    padding: 5px 0;
-    text-align: center;
-}
-
-.contact-details a {
-    color: var(--dark-blue);
-    text-decoration: none;
-}
 
 .carousel {
     position: relative;
@@ -284,6 +372,7 @@ section.introduction {
     justify-content: center;
     align-items: center;
     width: 100%;
+    overflow: visible;
 }
 
 .carousel-slide {
@@ -306,43 +395,8 @@ img {
     width: 75%;
   }
 
-.hero {
-    position: relative;
-    overflow: hidden;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.hero-content {
-    position: relative;
-    text-align: center;
-    z-index: 1;
-}
-
-.hero-title {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.hero-description {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-.hero-image {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    height: auto;
-    z-index: -1;
-}
-
-@media (max-width: 780px) {
+  @media (max-width: 780px) {
     .hero-title {
         font-size: 2.5rem;
     }
@@ -355,3 +409,28 @@ img {
         width: 90%;
     }
 }
+
+/* ------------------------------
+   Contact Page
+------------------------------ */
+.contact-details p {
+    font-size: 1rem; 
+    margin: 10px 0;
+    padding: 5px 0;
+    text-align: center;
+}
+
+.contact-details a {
+    color: var(--dark-blue);
+    text-decoration: none;
+}
+
+
+.background-image {
+    display: block; /* Remove any inline display issues */
+    margin: 20px auto; /* Center the image horizontally */
+    max-width: 100%; /* Make sure the image scales with the screen */
+    height: auto; /* Maintain aspect ratio */
+    width: 700px; /* Set a maximum width, adjust to your preference */
+}
+
