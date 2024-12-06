@@ -8,7 +8,7 @@
 }
 @font-face {
     font-family: 'Karla';
-    src: url('fonts/Karla/Karla.ttf') format('truetype');
+    src: url('../css/fonts/Karla/Karla.ttf') format('truetype');
     font-weight: 100 900;
 }
 
@@ -69,7 +69,7 @@ img {
 
 p {
     font-size: 20px;
-    margin: 10px;
+    margin: 20px;
     text-align:justify;
 }
 
@@ -163,7 +163,7 @@ header {
       z-index: 1001;
   
       span {
-        background-color: #333;
+        background-color:#404936;
         border-radius: 2px;
         display: block;
         height: 3px;
@@ -188,7 +188,7 @@ header {
   }
   
   nav {
-    background:#523B22;
+    background:#404936;
     height: 100vh;
     width: 15rem;
   
@@ -234,7 +234,21 @@ header {
     transform: rotate(-45deg);
     background-color:#FDF5EC;
   }
-
+  
+  .go-back-button {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    padding: 10px 20px;
+    color:#523B22;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .go-back-button:hover {
+    color:#A94034; /* Change background on hover */
+  }
 
 
 /* ------------------------------
@@ -389,9 +403,14 @@ section.introduction {
     width: 150px;
 }
 
+.gallery-link {
+    text-decoration: none; /* Removes underline from the link */
+}
 
-.gallery-item {
-    text-align: center;
+/* Optional: style the gallery item link when hovered */
+.gallery-link:hover {
+    /* Add any hover styles you want here */
+    opacity: 0.8; /* For example, change opacity on hover */
 }
 
 .gallery-item .text p {
@@ -399,6 +418,7 @@ section.introduction {
     color:#523B22;
     margin: 0.5rem 0;
     text-align: center;
+    text-decoration: none;
 }
 
 .text .small-text {
@@ -406,6 +426,7 @@ section.introduction {
     color: #1e3a8a;
     margin-top: 20px;
     font-style: italic;
+    text-decoration: none;
 }
 
 img {
@@ -452,11 +473,11 @@ img {
 
 
 .background-image {
-    display: block; /* Remove any inline display issues */
-    margin: 20px auto; /* Center the image horizontally */
-    max-width: 100%; /* Make sure the image scales with the screen */
-    height: auto; /* Maintain aspect ratio */
-    width: 700px; /* Set a maximum width, adjust to your preference */
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+    width: 100%;
 }
 
 
