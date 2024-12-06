@@ -114,13 +114,19 @@ h2 {
 }
 
 h3 {
-    color: #2C3B4D;
+    color:#523B22;
     font-size: 28px;
-    font-style: italic;
     font-weight: 500;
     margin: auto;
 }
 
+h4 {
+    color:#523B22;
+    font-size: 20px;
+    font-weight: 300;
+    margin: auto;
+    text-align: center;
+}
 
 /* ------------------------------
    Inline Header Styles
@@ -149,91 +155,92 @@ h3 {
 /* ------------------------------
    Navbar Styles
 ------------------------------ */
+/* Navbar Styles */
 header {
     padding: 1rem;
     position: relative;
-  
-    label {
-      cursor: pointer;
-      height: 1.25rem;
-      position: fixed;
-      right: 1rem;
-      top: 1rem;
-      width: 1.625rem;
-      z-index: 1001;
-  
-      span {
-        background-color:#404936;
-        border-radius: 2px;
-        display: block;
-        height: 3px;
-        position: absolute;
-        width: 100%;
-  
-        transform-origin: left;
-  
-        &:nth-child(1) {
-          top: 0;
-        }
-  
-        &:nth-child(2) {
-          top: 0.5rem;
-        }
-  
-        &:nth-child(3) {
-          top: 1rem;
-        }
-      }
-    }
-  }
-  
-  nav {
-    background:#404936;
+}
+
+header label {
+    cursor: pointer;
+    height: 1.25rem;
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    width: 1.625rem;
+    z-index: 1001;
+}
+
+header label span {
+    background-color: #404936;
+    border-radius: 2px;
+    display: block;
+    height: 3px;
+    position: absolute;
+    width: 100%;
+    transform-origin: left;
+}
+
+header label span:nth-child(1) {
+    top: 0;
+}
+
+header label span:nth-child(2) {
+    top: 0.5rem;
+}
+
+header label span:nth-child(3) {
+    top: 1rem;
+}
+
+/* Navigation Styles */
+nav {
+    background: #404936;
     height: 100vh;
     width: 15rem;
-  
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 2rem;
-  
-      li {
-        margin-bottom: 1rem;
-  
-        a {
-          color:#FDF5EC;
-          text-decoration: none;
-          font-size: 25px;
-          margin: auto;
-        }
-      }
-    }
-  
     position: fixed;
     right: -300px;
     top: 0;
     z-index: 1000;
-  }
-  
-  /* Show nav when checkbox is checked */
-  .nav-toggle:checked ~ nav {
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 2rem;
+}
+
+nav ul li {
+    margin-bottom: 1rem;
+}
+
+nav ul li a {
+    color: #FDF5EC;
+    text-decoration: none;
+    font-size: 25px;
+    margin: auto;
+}
+
+/* Show nav when checkbox is checked */
+.nav-toggle:checked ~ nav {
     right: 0;
-  }
-  
-  .nav-toggle:checked ~ .nav-toggle-label span:nth-child(1) {
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span:nth-child(1) {
     transform: rotate(45deg);
     top: -2px; /* Fix */
-    background-color:#FDF5EC;
-  }
-  
-  .nav-toggle:checked ~ .nav-toggle-label span:nth-child(2) {
+    background-color: #FDF5EC;
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span:nth-child(2) {
     opacity: 0;
-  }
-  
-  .nav-toggle:checked ~ .nav-toggle-label span:nth-child(3) {
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span:nth-child(3) {
     transform: rotate(-45deg);
-    background-color:#FDF5EC;
-  }
+    background-color: #FDF5EC;
+}
+
   
   .go-back-button {
     position: fixed;
@@ -277,7 +284,7 @@ header {
 
 .hero-content .small-text {
     font-size: 1rem;
-    color: #1e3a8a;
+    color:#2C3B4D;
     margin-top: 20px;
     font-style: italic;
 }
@@ -310,33 +317,7 @@ header {
     height: auto;
 }
 
-.wrapper, .container {
-    margin: 0 auto;
-    max-width: 100%;
-}
 
-
-
-section.work-item {
-    font-weight: 500;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1em;
-    padding: 1em;
-}
-
-section.work-item img {
-    max-width: 600px;
-    height: auto;
-    position: relative;
-    width: 50%;
-    max-width: 500px;
-    margin: auto;
-    overflow: hidden;
-    border-radius: 8px;
-}
 
 section.introduction {
     font-size: 1rem;
@@ -393,24 +374,22 @@ section.introduction {
 }
 
 .profile-image {
-    width: 50%;
+    width: 80%;
     height: auto;
     border-radius: 50%;
     margin-left: auto;
     margin-right: auto;
     border: 1px solid #ddd;
     padding: 5px;
-    width: 150px;
 }
+  
 
 .gallery-link {
-    text-decoration: none; /* Removes underline from the link */
+    text-decoration: none;
 }
 
-/* Optional: style the gallery item link when hovered */
 .gallery-link:hover {
-    /* Add any hover styles you want here */
-    opacity: 0.8; /* For example, change opacity on hover */
+    opacity: 0.8;
 }
 
 .gallery-item .text p {
@@ -421,13 +400,13 @@ section.introduction {
     text-decoration: none;
 }
 
-.text .small-text {
+a .text .small-text {
     font-size: 1rem;
-    color: #1e3a8a;
+    color:#2C3B4D;
     margin-top: 20px;
     font-style: italic;
     text-decoration: none;
-}
+  }
 
 img {
     display: inline-block; /* Ensures it respects text alignment */
@@ -484,4 +463,5 @@ img {
 footer p {
     font-size: 18px;
     margin: 20px 30px;
+    text-align: left;
 }
