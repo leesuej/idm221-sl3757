@@ -68,9 +68,9 @@ img {
   }
 
 p {
-    font-size: 20px;
+    font-size: 18px;
     margin: 20px;
-    text-align:justify;
+    text-align:inherit;
 }
 
 ul {
@@ -354,7 +354,7 @@ section.introduction {
     color: #2C3B4D;
     line-height: 1.4;
     margin-bottom: 15px;
-    text-align: justify;
+    text-align: center;
     font-family: 'EB Garamond', serif;
 }
 
@@ -392,13 +392,21 @@ section.introduction {
     opacity: 0.8;
 }
 
-.gallery-item .text p {
-    line-height: 1.5;
-    color:#523B22;
-    margin: 0.5rem 0;
+.gallery-item .text {
+    padding: 0 20px; /* Adds space around the text container */
+    text-align: center; /* Centers the text in the container */
+}
+
+.gallery-item .small-text p {
+    color: #523B22;
+    margin: 0.5rem auto; /* Centers the paragraph within the container */
+    max-width: 600px; /* Limits the paragraph width for better readability */
     text-align: center;
     text-decoration: none;
+    line-height: 1.5; /* Improves readability */
+
 }
+
 
 a .text .small-text {
     font-size: 1rem;
@@ -406,6 +414,7 @@ a .text .small-text {
     margin-top: 20px;
     font-style: italic;
     text-decoration: none;
+
   }
 
 img {
